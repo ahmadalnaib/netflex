@@ -20,7 +20,17 @@ if(isset($_POST['submitButton'])){
 </head>
 <body>
   <div class="signInContainer">
+
   <div class="column">
+
+    <div class="header">
+    <i class="fas fa-video fa-2x">
+      <span class="ar">نارنج</span>
+    </i>
+      <h3>Sign Up</h3>
+      <span>to continue to Narng</span>
+    </div>
+
   <form action="" method="POST">
     
     <input type="text" name="firstName" placeholder="First name" required>
@@ -43,5 +53,7 @@ if(isset($_POST['submitButton'])){
   </form>
   </div>
   </div>
+
+  <script src="https://kit.fontawesome.com/ca11177b7a.js" crossorigin="anonymous"></script>
 </body>
 </html>
