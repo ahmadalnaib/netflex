@@ -9,7 +9,19 @@
 <body>
   <div class="signInContainer">
   <div class="column">
-  
+  <form action="" method="POST">
+    
+    <input type="text" name="firstName" placeholder="First name">
+    <input type="text" name="lastName" placeholder="Last name">
+    <input type="text" name="userName" placeholder="User name">
+    <input type="email" name="email" placeholder="Email">
+    <input type="email" name="email2" placeholder="Confirm email">
+    <input type="password" name="password" placeholder="Password">
+    <input type="password" name="password2" placeholder="Confirm password">
+    <input type="submit" name="submitPassword" value="Submit">
+
+
+  </form>
   </div>
   </div>
 </body>
