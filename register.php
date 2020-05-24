@@ -7,6 +7,10 @@
   <title>Netflex || Welcome</title>
 </head>
 <body>
+  <div class="signInContainer">
+  <div class="column">
   
+  </div>
+  </div>
 </body>
 </html>
