@@ -33,20 +33,24 @@ html {
   width: 450px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
   padding: 20px 35px;
+  overflow-y: auto;
 
 }
 
 .column form {
   display: flex;
   flex-direction: column;
+  padding-top: 20px;
 
 }
+
+
 
 .column form input[type="text"],
 .column form input[type="email"],
 .column form input[type="password"]{
 
-  font-size:  1.4rem;
+  font-size:  1.7rem;
   margin: 10px 0;
   border:  none;
   border-bottom: 1px solid #ddd;
@@ -94,4 +98,11 @@ html {
 .header span{
   font-size: 1.7rem;
   color: #333;
+}
+
+.signMessage{
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #ff8147;
+
 }
