@@ -1,7 +1,10 @@
 <?php
 require_once ("includes/config.php");
 require_once("includes/classes/FormSanitizer.php");
+require_once("includes/classes/Account.php");
 
+#account class
+$account=new Account($conn);
 
 if(isset($_POST['submitButton'])){
 
