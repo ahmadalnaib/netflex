@@ -1,21 +1,13 @@
 <?php
-
+require_once("includes/classes/FormSanitizer.php");
 if(isset($_POST['submitButton'])){
 
-    $firstName= formString($_POST['firstName']);
-    echo $firstName;
-}
-
-//function for form input name
-function formString($inputText) {
-    $inputText=htmlspecialchars($inputText);
-//    $inputText=str_replace(" ","",$inputText);
-  $inputText=trim($inputText);  #remove speaceing
-   $inputText=strtolower($inputText);  # make the name small
-    $inputText=ucfirst($inputText); #make the first charter captel
-    return $inputText;
+    $firstName=FormSanitizer::formString($_POST['firstName']);
 
 }
+
+
+
 
 
 ?>
