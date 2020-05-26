@@ -14,7 +14,7 @@ class Account
     {
         if(strlen($fn) < 2 || strlen($fn) > 25)
         {
-        array_push($this->errorArray,"First Name wrong length ");
+        array_push($this->errorArray,Constants::$firstNameCharacters);
         }
     }
 
