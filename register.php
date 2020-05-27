@@ -15,6 +15,7 @@ if(isset($_POST['submitButton'])){
 
     $userName=FormSanitizer::FormUsername($_POST['userName']);
 
+
     $email=FormSanitizer::FormEmail($_POST['email']);
 
     $email2=FormSanitizer::FormEmail($_POST['email2']);
@@ -59,18 +60,21 @@ if(isset($_POST['submitButton'])){
 
   <form action="" method="POST">
      <?php echo $account->getError(Constants::$firstNameCharacters);?>
-    <input type="text" name="firstName" placeholder="First name" required>
-
       <?php echo $account->getError(Constants::$lastNameCharacters);?>
-    <input type="text" name="lastName" placeholder="Last name" required>
-
       <?php echo $account->getError(Constants::$userNameCharacters);?>
       <?php echo $account->getError(Constants::$userNameTaken);?>
-    <input type="text" name="userName" placeholder="User name" required>
-
       <?php echo $account->getError(Constants::$emailsDontMatch);?>
       <?php echo $account->getError(Constants::$emailInvalid);?>
       <?php echo $account->getError(Constants::$emailTaken);?>
+      <?php echo $account->getError(Constants::$passwordsDontMatch);?>
+      <?php echo $account->getError(Constants::$passwordLength);?>
+
+    <input type="text" name="firstName" placeholder="First name" required>
+
+    <input type="text" name="lastName" placeholder="Last name" required>
+
+    <input type="text" name="userName" placeholder="User name" required>
+
     <input type="email" name="email" placeholder="Email" required>
 
     <input type="email" name="email2" placeholder="Confirm email" required>
