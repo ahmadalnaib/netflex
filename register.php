@@ -23,7 +23,7 @@ if(isset($_POST['submitButton'])){
 
     $password2=FormSanitizer::FormPassword($_POST['password2']);
 
-$account->validateFirstName($firstName);
+    $account->register($firstName,$lastName,$email,$email2,$password,$password2);
 
 }
 
@@ -60,7 +60,7 @@ $account->validateFirstName($firstName);
   <form action="" method="POST">
      <?php echo $account->getError(Constants::$firstNameCharacters);?>
     <input type="text" name="firstName" placeholder="First name" required>
-
+      <?php echo $account->getError(Constants::$lastNameCharacters);?>
     <input type="text" name="lastName" placeholder="Last name" required>
 
     <input type="text" name="userName" placeholder="User name" required>

@@ -50,7 +50,7 @@ html {
 .column form input[type="email"],
 .column form input[type="password"]{
 
-  font-size:  1.7rem;
+  font-size:  2rem;
   margin: 10px 0;
   border:  none;
   border-bottom: 1px solid #ddd;
