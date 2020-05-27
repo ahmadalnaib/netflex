@@ -23,7 +23,7 @@ if(isset($_POST['submitButton'])){
 
     $password2=FormSanitizer::FormPassword($_POST['password2']);
 
-    $account->register($firstName,$lastName,$email,$email2,$password,$password2);
+    $account->register($firstName,$lastName,$userName,$email,$email2,$password,$password2);
 
 }
 
@@ -60,9 +60,12 @@ if(isset($_POST['submitButton'])){
   <form action="" method="POST">
      <?php echo $account->getError(Constants::$firstNameCharacters);?>
     <input type="text" name="firstName" placeholder="First name" required>
+
       <?php echo $account->getError(Constants::$lastNameCharacters);?>
     <input type="text" name="lastName" placeholder="Last name" required>
 
+      <?php echo $account->getError(Constants::$userNameCharacters);?>
+      <?php echo $account->getError(Constants::$userNameTaken);?>
     <input type="text" name="userName" placeholder="User name" required>
 
     <input type="email" name="email" placeholder="Email" required>
