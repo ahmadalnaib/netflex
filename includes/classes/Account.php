@@ -30,11 +30,11 @@ class Account
 //     $pw=password_hash($pw,PASSWORD_DEFAULT);
         $query=$this->conn->prepare("INSERT INTO users (firstName,lastName,username,email,password)
                                      VALUES (:fn,:ln,:un,:em,:pw)");
-        $query->bindValue(":fn,$fn");
-        $query->bindValue(":ln,$ln");
-        $query->bindValue(":un,$un");
-        $query->bindValue(":em,$em");
-        $query->bindValue(":pw,$pw");
+        $query->bindValue(":fn",$fn);
+        $query->bindValue(":ln",$ln);
+        $query->bindValue(":un",$un);
+        $query->bindValue(":em",$em);
+        $query->bindValue(":pw",$pw);
 
         return $query->execute();
     }
