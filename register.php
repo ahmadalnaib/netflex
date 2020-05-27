@@ -68,6 +68,9 @@ if(isset($_POST['submitButton'])){
       <?php echo $account->getError(Constants::$userNameTaken);?>
     <input type="text" name="userName" placeholder="User name" required>
 
+      <?php echo $account->getError(Constants::$emailsDontMatch);?>
+      <?php echo $account->getError(Constants::$emailInvalid);?>
+      <?php echo $account->getError(Constants::$emailTaken);?>
     <input type="email" name="email" placeholder="Email" required>
 
     <input type="email" name="email2" placeholder="Confirm email" required>
