@@ -10,24 +10,16 @@ $account=new Account($conn);
 if(isset($_POST['submitButton'])){
 
     $firstName=FormSanitizer::formString($_POST['firstName']);
-
     $lastName=FormSanitizer::FormString($_POST['lastName']);
-
     $userName=FormSanitizer::FormUsername($_POST['userName']);
-
-
     $email=FormSanitizer::FormEmail($_POST['email']);
-
     $email2=FormSanitizer::FormEmail($_POST['email2']);
-
     $password=FormSanitizer::FormPassword($_POST['password']);
-
     $password2=FormSanitizer::FormPassword($_POST['password2']);
 
     $success=$account->register($firstName,$lastName,$userName,$email,$email2,$password,$password2);
     if($success){
         # store session
-
         header("Location: index.php");
     }
 }

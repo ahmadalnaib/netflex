@@ -1,7 +1,17 @@
 <?php
 
 if(isset($_POST['submitButton'])){
-  echo "Form was submitting";
+
+
+    $userName=FormSanitizer::FormUsername($_POST['userName']);
+    $password=FormSanitizer::FormPassword($_POST['password']);
+
+
+    $success=$account->register($userName,$password);
+    if($success){
+        # store session
+        header("Location: index.php");
+    }
 }
 
 
