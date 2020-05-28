@@ -15,6 +15,7 @@ if(isset($_POST['submitButton'])){
     $success=$account->login($userName,$password);
     if($success){
         # store session
+        $_SESSION["userLoggedIn"]=$userName;
         header("Location: index.php");
     }
 }
