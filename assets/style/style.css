@@ -109,9 +109,9 @@ html {
 
 
 .errorMessage{
-  display: block;
+
   color: #f00;
-  font-size: 2rem;
+  font-size: 1rem;
   text-align: center;
 
 }
