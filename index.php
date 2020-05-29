@@ -7,6 +7,6 @@ if(!isset($_SESSION["userLoggedIn"])){
 }
 $userLoggedIn=$_SESSION['userLoggedIn'];
 $preview=new PreviewProvider($conn,$userLoggedIn);
-echo  $preview->createPreviewVideo();
+echo  $preview->createPreviewVideo(null);
 
 ?>
